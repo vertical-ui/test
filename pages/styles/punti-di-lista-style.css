@@ -1,0 +1,3440 @@
+body{
+  margin:0%;
+}
+
+.dashed-line {
+  --s:15px; /* control the space between dashes */
+  z-index:  3;
+  opacity: 0%;
+  display: block;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 600px;
+  width: 5px;
+  height: 5px;
+  animation: fadeindrop 2s linear;
+  animation-delay: 2.3s;
+  animation-fill-mode: forwards;
+  background: 
+   linear-gradient(#9dcef172 50%, #0000 0) 0 calc(var(--s)/2)/100% calc(2*var(--s));
+   
+}
+
+
+#dashed-line2 {
+  --s:15px; /* control the space between dashes */
+  z-index:  8;
+  opacity: 0%;
+  display: block;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 1380px;
+  width: 5px;
+  height: 5px;
+  background: 
+   linear-gradient(#9dcef172 50%, #0000 0) 0 calc(var(--s)/2)/100% calc(2*var(--s));
+   
+}
+#dashed-line2.retract {
+  --s:15px; /* control the space between dashes */
+  z-index:  10;
+  opacity: 100%;
+  display: block;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 1380px;
+  width: 5px;
+  height: 245px;
+  animation: fadeindrop2rev 2s linear ;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+  background: 
+   linear-gradient(#9dcef172 50%, #0000 0) 0 calc(var(--s)/2)/100% calc(2*var(--s));
+   
+}
+
+
+#dashed-line2.estesa {
+  --s:15px; /* control the space between dashes */
+  z-index:  10;
+  opacity: 0%;
+  display: block;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 1380px;
+  width: 5px;
+  height: 5px;
+  animation: fadeindrop2 2s linear;
+  animation-delay: 2.3s;
+  animation-fill-mode: forwards;
+  background: 
+   linear-gradient(#9dcef172 50%, #0000 0) 0 calc(var(--s)/2)/100% calc(2*var(--s));
+   
+}
+
+@keyframes fadeindrop{
+ 0%{
+  opacity: 0%;
+ }
+  10%{
+    opacity: 100%;
+ }
+
+ 100%{
+  height: 260px;
+  opacity: 100%;
+ }
+}
+
+@keyframes fadeindrop2{
+  0%{
+   opacity: 0%;
+  }
+   10%{
+     opacity: 100%;
+  }
+ 
+  100%{
+   height: 265px;
+   opacity: 100%;
+  }
+ }
+
+ @keyframes fadeindrop2rev{
+  0%{
+    opacity: 0%;
+    height: 5px;
+   }
+    10%{
+      opacity: 100%;
+   }
+  
+   100%{
+    height: 265px;
+    opacity: 100%;
+  }
+ }
+
+.section1{
+  height: 630px;
+  background: linear-gradient(180deg, rgb(45, 113, 156)
+  0%, rgb(13, 30, 46) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+#blob1{
+  position: relative;
+  height: 500px;
+  width: 500px;
+  left: 200px;
+  background-color: #00000015;
+  border-radius: 35% 65% 70% 30% / 61% 38% 62% 39% ;
+  display: block;
+  animation: rototrasl 15s linear infinite;
+}
+
+
+#blob2{
+  position: relative;
+  height: 200px;
+  width: 200px;
+  top: -100px;
+  right: 100px;
+  background-color: #00000011;
+  border-radius: 35% 65% 70% 30% / 61% 38% 62% 39% ;
+  display: block;
+  animation: rototrasl 15s linear infinite;
+}
+
+
+@keyframes rototrasl {
+  0%{
+    rotate: 0deg;
+    
+  }
+  100%{
+    rotate: 360deg;
+  }
+}
+#wave{
+  top: -1px;
+  position: relative;
+}
+
+
+.box2 {
+  z-index: 5;
+}
+.box2 p{
+  color: #bedbec;
+  animation: fadeIn 2s linear;
+}
+
+
+
+
+.section2{
+  height: 800px;
+  top: -2px;
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(180deg, rgb(13, 30, 46) 0%,rgb(13, 30, 46) 5%,  rgb(45, 113, 156) 100%);
+  overflow: hidden;
+}
+
+
+
+#section3{
+  height: 800px;
+  top: -2px;
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(180deg, rgb(45, 113, 156) 0%,  rgb(13, 30, 46) 100%);
+  overflow: hidden;
+}
+
+
+
+@font-face { font-family: Poppins-italic; 
+  src: url('../../fonts/Poppins-Regular.ttf'); } 
+
+  @font-face { font-family: Poppins-Bold; 
+    src: url('../../fonts/Poppins-Bold.ttf'); } 
+  
+  
+
+  * {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.phone {
+  height: 50px;
+  width: 100px;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  animation: rotate1 1.5s ease-in-out infinite alternate;
+  display: none;
+  z-index: 10;
+  /* display: none; */
+}
+
+.message {
+  color: rgb(255, 255, 255);
+  font-size: 1em;
+  margin-top: 40px;
+  display: none;
+  z-index: 10;
+  /* display: none; */
+}
+
+@keyframes rotate1 {
+  0% {
+    transform: rotate(0deg)
+  }
+  50% {
+    transform: rotate(-90deg)
+  }
+  100% {
+    transform: rotate(-90deg)
+  }
+}
+
+@media only screen and (min-device-width: 951px){
+  .messagepc {
+    display: block;
+    background-color:#0e2736;
+    width: 100%;
+    height:100vh;
+    margin-top: 0;
+    text-align: center;
+    justify-content: center;
+    
+  }
+  .parent-container{
+    display: none
+  };
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:#224f6b
+  }
+  .phone2 {
+    display:block;
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20%;
+  }
+  #sections-container {
+
+    display: none;
+}
+}
+
+
+@media only screen and (min-device-height: 1000px){
+  .messagepc {
+    display: block;
+    background-color:#0e2736;
+    width: 100%;
+    height:100vh;
+    margin-top: 0;
+    text-align: center;
+    justify-content: center;
+    
+  }
+  .parent-container{
+    display: none
+
+  };
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:#224f6b;
+    position: static;
+  }
+  .phone2 {
+    display:block;
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20%;
+  }
+  .wave {
+
+    display: none;
+}
+
+}
+
+#wave{
+  display: block;
+}
+
+.phone2 {
+  position: relative;
+
+  height: 200px;
+  width: 100px;
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  display: none;
+  z-index: 10;
+  /* display: none; */
+}
+
+
+
+
+.messagepc{
+  display: none;
+  z-index: 15;
+  
+  /* display: none; */
+}
+
+
+
+
+
+
+
+
+.messagepc p{
+  position: relative;
+  transform: translateY(-50%);
+  font-size: 25px;
+  color: white;
+  font-family: Poppins-Bold;
+  margin-top: 50px;
+}
+
+
+
+
+
+
+@media only screen and (max-device-width: 950px) and (max-device-height: 500px) and (orientation: landscape) {
+  .phone, .message {
+    display: block;
+  }
+  .parent-container{
+    display: none;
+  }
+    #sections-container {
+
+      display: none;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:#0e2736
+  }
+  
+
+
+
+}
+
+@media only screen and (min-device-width: 951px){
+  .messagepc {
+    display: block;
+    background-color:#0e2736;
+    width: 100%;
+    height:100vh;
+    margin-top: 0;
+    text-align: center;
+    justify-content: center;
+    
+  }
+  #sections-container {
+
+    display: none;
+  }
+  .parent-container{
+    display: none
+  };
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:#224f6b
+  }
+  .phone2 {
+    display:block;
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20%;
+  }
+
+}
+
+
+@media only screen and (min-device-height: 1000px){
+  .messagepc {
+    display: block;
+    background-color:#0e2736;
+    width: 100%;
+    height:100vh;
+    margin-top: 0;
+    text-align: center;
+    justify-content: center;
+    
+  }
+  .parent-container{
+    display: none
+  };
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:#224f6b
+  }
+  .phone2 {
+    display:block;
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20%;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Poppins-italic;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.body-active{
+  padding: 0;
+  margin: 0;
+  font-family: Poppins-italic;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: hidden ;
+}
+
+
+
+
+
+
+.parent-container {
+    /* Assicurati che il parent non abbia overflow problematico */
+    overflow: hidden;
+     /* Modifica o rimuovi overflow problematico */
+}
+
+nav {
+  padding: 5px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  z-index: 0;
+  background-color: white;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+nav .logo img {
+  height: 60px;
+  width: auto;
+  margin-right: 10px;
+  border:solid #1B4965;
+  border-width: 1px;
+  border-radius: 25px;
+}
+nav .logo h1 {
+  font-size: 1.1rem;
+  background: linear-gradient(to right, #62B6CB 0%, #1B4965 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Poppins-Bold;
+  width: 200px;
+  font-size: 23px;
+  margin: 0;
+  margin-left: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  margin-left: 1.5rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 95%;
+  font-weight: 400;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #f5f5f5;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 1px;
+  background-color: #1f1f1f;
+  display: block;
+  margin: 7px auto;
+  transition: all 0.3s ease-in-out;
+}
+.hamburger-active {
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.6s;
+  transform: rotate(45deg);
+}
+
+.hamburger-active .line:nth-child(2) {
+  width: 0px;
+}
+
+.hamburger-active .line:nth-child(1),
+.hamburger-active .line:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.hamburger-active .line:nth-child(1) {
+  transform: translateY(12px);
+}
+
+.hamburger-active .line:nth-child(3) {
+  transform: translateY(-5px) rotate(90deg);
+}
+
+.menubar {
+  position: absolute;
+  top: 0;
+  left: -60%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 60%;
+  height: 100vh;
+  padding: 0 10%;
+  background: rgba(255, 255, 255);
+  transition: all 0.5s ease-in;
+  z-index: 100;
+}
+
+.active {
+  left: 0;
+}
+
+.menubar ul h1{
+    background: linear-gradient(to right, #62B6CB 0%, #1B4965 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Poppins-Bold;
+    font-size: 30px;
+}
+
+
+.menubar ul {
+  padding: 0;
+  list-style: none;
+}
+.menubar ul li {
+  margin-bottom: 32px;
+}
+
+.menubar ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 95%;
+  font-weight: 400;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.menubar ul li a:hover {
+  background-color: #f5f5f5;
+}
+@media screen and (max-width: 790px) {
+  .hamburger {
+    display: block;
+  }
+  nav ul {
+    display: none;
+  }
+}
+
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+}
+
+
+
+
+@keyframes fadeInUp {
+    0% {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  
+
+.container .box1{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin-top: 25px;
+    animation: 1s fadeIn
+    
+
+}
+@keyframes fadeIn {
+    0% {
+
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+
+.container h1{
+    z-index: 2;
+    background: linear-gradient(to right, #BEE9E8 0%, #CAE9FF 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 25px;
+    position: relative;
+}
+
+
+
+#punto1 {
+
+  height: 80px;
+  width: calc(150px + 5vw);;
+  display: block;
+  position: relative;
+  border: none;
+  overflow: hidden;
+  border-radius: 5px;
+  z-index: 1;
+  animation: glow linear 1.5s infinite;
+
+}
+
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 0cqh #ffffff;
+  }
+  50%{
+    text-shadow: 0 0 7px #ffffff
+  }
+  100% {
+    text-shadow: 0 0 0px #ffffff;
+  }
+}
+
+
+
+.linea {
+  background-color: #BEE9E8;
+  height: 2px;
+  width: 10px;
+  border-radius: 20px;
+  display: block;
+  position: relative;
+  animation: estensione 2.5s ease-in-out ;
+  animation-fill-mode: forwards;
+  z-index: 2;
+}
+
+
+@keyframes estensione{
+  0%{
+    width: 10px;
+    opacity: 0%;
+  }
+  20%{
+    opacity: 100%;
+  }
+  100%{
+    width: 85%;
+  }
+}
+
+
+@keyframes focus {
+ 0%{
+  pointer-events: none; 
+ }
+ 100%{
+  background-color: #CAE9FF;
+  height: 45vh;
+  width: 90vw;
+  position: absolute;
+  display: block;
+  left:0;
+  z-index: 90;
+  pointer-events: none;
+  top:0;
+ }
+  
+}
+
+
+@keyframes focus2 {
+  0%{
+   pointer-events: none; 
+  }
+  100%{
+   background-color: #CAE9FF;
+   height: 45vh;
+   width: 90vw;
+   position: absolute;
+   display: block;
+   left:0;
+   z-index: 90;
+   pointer-events: none;
+   top:100px;
+  }
+   
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes unfocus {
+  0%{
+    pointer-events: none;
+    background-color: #CAE9FF;
+  }
+  100%{
+    height: 100px;
+    width: calc(150px + 5vw);
+    display: block;
+    position: absolute;
+    border: none;
+    pointer-events: all;
+    z-index: 9;
+  }
+}
+
+@keyframes unfocus2 {
+  0%{
+    pointer-events: none;
+    background-color: #CAE9FF;
+  }
+  100%{
+    height: 100px;
+    width: calc(150px + 5vw);
+
+    display: block;
+    position: absolute;
+    border: none;
+    pointer-events: all;
+    top: 150px;
+    z-index: 9;
+  }
+}
+
+
+
+
+
+
+
+
+
+#punto1.active{
+ animation: focus 1.5s ease-in-out;
+ animation-fill-mode: forwards;
+ pointer-events: none;
+}
+
+
+#punto1.inactive{
+  height: 45vh;
+  width: 90vw;
+  position: absolute;
+  display: block;
+  left:0;
+  z-index: 10;
+  animation: unfocus 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes fadein {
+  0%{
+    opacity: 0%;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
+
+
+
+
+#chiudi {
+  opacity: 0%;
+  height: 50px;
+  width: 50px;
+  display: block;
+  border-radius: 5px;
+  position: relative;
+  float: right;
+  z-index: 1000;
+  pointer-events: all;
+  margin-left: 10px;
+}
+
+.close {
+  position: absolute;
+  width: 100%;
+  height: 32px;
+  z-index: 100000;
+}
+
+
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #000000;
+  margin-top: 7px;
+  margin-left: 10px;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+
+
+
+
+
+#chiudi.active {
+  animation: fadein 1s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+}
+
+#chiudi.inactive {
+  animation: fadeout 0.5s linear;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes fadeout {
+  0%{
+    opacity: 100%;
+  }
+  100%{
+    opacity: 0%;
+  }
+}
+
+
+
+
+#punto1-container{
+  height: 80px;
+  width: calc(150px + 5vw);
+  top:150px;
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  border: none;
+  margin: 20px;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+}
+
+#punto1-container.active{
+  animation: focus2 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+  margin:20px;
+ }
+
+
+ #punto1-container.inactive{
+  height: 45vh;
+  width: 90vw;
+  position: absolute;
+  display: block;
+  z-index: 10;
+  animation: unfocus2 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+  margin: 20px;
+  top:100px;
+
+}
+
+
+
+
+.fancy {
+  background-color: transparent;
+  border: 2px solid #234f5a;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-left: 20px;
+  top: -20px;
+  outline: none;
+  overflow: visible;
+  padding: 1.25em 2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-size: 13px;
+ }
+ 
+ .fancy::before {
+  content: " ";
+  width: 1.5625rem;
+  height: 2px;
+  background: #002129;
+  top: 50%;
+  left: 1.5em;
+  position: absolute;
+  transform: translateY(-50%);
+  transform-origin: center;
+  transition: background 0.3s linear, width 0.3s linear;
+ }
+ 
+ .fancy .text {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  padding-left: 2em;
+  display: block;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #002129;
+ }
+ 
+ .fancy .top-key {
+  height: 2px;
+  width: 1.5625rem;
+  top: -2px;
+  left: 0.625rem;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, left 0.3s ease-out;
+ }
+ 
+ .fancy .bottom-key-1 {
+  height: 2px;
+  width: 1.5625rem;
+  right: 1.875rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+ }
+ 
+ .fancy .bottom-key-2 {
+  height: 2px;
+  width: 0.625rem;
+  right: 0.625rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+ }
+ 
+ .fancy:hover {
+  color: white;
+  background: linear-gradient(to right, #2a6d97 0%, #002129 100%);
+
+ }
+ 
+ .fancy:hover::before {
+  width: 0.9375rem;
+  background: white;
+ }
+ 
+ .fancy:hover .text {
+  color: white;
+  padding-left: 1.5em;
+ }
+ 
+ .fancy:hover .top-key {
+  left: -2px;
+  width: 0px;
+ }
+ 
+ .fancy:hover .bottom-key-1,
+  .fancy:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
+ }
+
+
+
+
+
+
+#descrizionepunto1{
+  margin: 10px;
+  display: none;
+}
+
+#titolopunto1{
+  display:block
+}
+
+#descrizionepunto1.active{
+  display: block;
+  opacity: 0%;
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 1.2s;
+}
+
+#descrizionepunto1.inactive{
+  display: none;
+}
+
+
+.titolopunto{
+  background: linear-gradient(to right, #cff5ff 0%, #a7ddff 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Poppins-bold;
+  margin:10px;
+  font-size: 4vw;
+}
+
+.titolopunto.attivo{
+  background: linear-gradient(to right, #116d85 0%, #134e72 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Poppins-bold;
+  margin:10px;
+  font-size: 4vw;
+  animation: none;
+}
+
+
+
+.descrizionepunto{
+  margin:10px;
+  color: #000000;
+  pointer-events: none;
+}
+
+
+#lineatratt{
+  height: 5px;
+  width: 4px;
+  background-color:#bedbec;
+  z-index: 9;
+  position: absolute;
+  left: 50%;
+  border-radius: 10px;
+  top: 170px;
+  translate: -50%;
+  animation: dropdown 2.5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dropdown {
+  0%{
+    height: 5px;
+  }
+  100%{
+    height: 400px;
+  }
+}
+
+
+#lineatratt2{
+  height: 5px;
+  width: 4px;
+  background-color:#bedbec;
+  z-index: 9;
+  position: absolute;
+  left: 50%;
+  border-radius: 10px;
+  top: 170px;
+  translate: -50%;
+  animation: dropdown2 2.5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dropdown2 {
+  0%{
+    height: 5px;
+  }
+  100%{
+    height: 550px;
+  }
+}
+
+
+
+
+
+
+
+
+@keyframes unfocus22 {
+  0%{
+    pointer-events: none;
+    background-color: #0770bb00;
+  }
+  100%{
+    height: 100px;
+    width: calc(150px + 5vw);
+    opacity: 100%;
+    display: block;
+    position: absolute;
+    pointer-events: all;
+  }
+}
+
+
+
+@keyframes focuspunto2 {
+
+  0%{
+    pointer-events: stroke; 
+   }
+   100%{
+    background-color: #CAE9FF;
+    height: 50vh;
+    width: 90vw;
+    top: 150px;
+    position: absolute;
+    display: block;
+    z-index: 10;
+    pointer-events: stroke;
+   }
+
+
+}
+
+@keyframes focuspunto2- {
+
+  0%{
+    pointer-events: stroke; 
+   }
+   100%{
+    height: 50vh;
+    width: 90vw;
+    position: absolute;
+    display: block;
+    z-index: 10;
+    pointer-events: stroke;
+    overflow: scroll;
+   }
+
+  }
+
+
+  @keyframes n2unfocus {
+    0%{
+      pointer-events: none;
+      background-color: #CAE9FF;
+      text-align: left;
+    }
+    100%{
+      height: 100px;
+      width: calc(150px + 5vw);
+      display: block;
+      position: absolute;
+      border: none;
+      pointer-events: all;
+      top:250px;
+    }
+  }
+
+
+
+
+
+ #punto2-container{
+  opacity: 0;
+  height: 100px;
+  top: 250px;
+  width: calc(140px + 5vw);
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  border: none;
+  margin: 20px;
+  right: 0px;
+  animation: fadeIn 2s linear;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+  float: right;
+  text-align: right;
+}
+
+#punto2{
+  animation: glow linear 1.5s infinite;
+  animation-delay: 0.5s;
+  height: inherit;
+}
+
+
+
+
+
+#punto2-container.attivo{
+  opacity: 100%;
+  animation: focuspunto2 1.5s ease-in-out;
+  text-align: left;
+  animation-fill-mode: forwards;
+
+}
+
+#punto2-container.inactive{
+  height: 50vh;
+  width: 90vw;
+  position: absolute;
+  display: block;
+  z-index: 9;
+  animation: n2unfocus 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+  margin: 20px;
+  top: 150px;
+  opacity: 100%;
+
+}
+
+
+#chiudi2 {
+  opacity: 0%;
+  height: 50px;
+  width: 50px;
+  display: block;
+  border-radius: 5px;
+  position: relative;
+  float: right;
+  z-index: 1000;
+  pointer-events: all;
+  margin-left: 10px;
+  pointer-events: none;
+}
+
+#chiudi2.attivo {
+  animation: fadein 1s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+  pointer-events: all;
+  
+}
+
+#chiudi2.inactive {
+  opacity: 0%;
+  pointer-events: none;
+}
+
+
+#punto2.attivo{
+  animation: focuspunto2- 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+  pointer-events: stroke;
+   
+ }
+
+ #punto2.inactive{
+  animation: unfocus22 1.5s ease-in-out;
+  height: 50vh;
+  width: 90vw;
+  position: absolute;
+  display: block;
+  z-index: 9;
+  animation-fill-mode: forwards;
+  opacity: 100%;
+  overflow: hidden;
+   
+ }
+ #descrizionepunto2{
+  opacity: 0%;
+  pointer-events: none;
+
+}
+
+#descrizionepunto2.attivo{
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 1.2s;
+  pointer-events: none;
+}
+
+
+@keyframes focuspunto3 {
+
+  0%{
+    pointer-events: stroke; 
+   }
+   100%{
+    background-color: #CAE9FF;
+    height: 50vh;
+    width: 90vw;
+    top: 150px;
+    left:0;
+    position: absolute;
+    display: block;
+    z-index: 10;
+    pointer-events: stroke;
+   }
+
+
+}
+
+@keyframes focuspunto3- {
+
+  0%{
+    pointer-events: stroke; 
+   }
+   100%{
+    height: 50vh;
+    width: 90vw;
+    position: absolute;
+    display: block;
+    z-index: 10;
+    pointer-events: stroke;
+    overflow: scroll;
+   }
+
+  }
+
+
+  @keyframes n3unfocus {
+    0%{
+      pointer-events: none;
+      background-color: #CAE9FF;
+      text-align: left;
+    }
+    100%{
+      height: 100px;
+      width: calc(150px + 5vw);
+      display: block;
+      position: absolute;
+      border: none;
+      pointer-events: all;
+      top:350px;
+      left:20px;
+    }
+  }
+
+
+
+
+
+ #punto3-container{
+  opacity: 0;
+  height: 100px;
+  top: 350px;
+  width: calc(140px + 5vw);
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  border: none;
+  margin: 20px;
+  left: 20px;
+  animation: fadeIn 2s linear;
+  animation-delay: 1.2s;
+  animation-fill-mode: forwards;
+  float: left;
+}
+
+#punto3{
+  animation: glow linear 1.5s infinite;
+  animation-delay: 1.2s;
+  height: inherit;
+}
+
+
+
+
+
+#punto3-container.attivo{
+  opacity: 100%;
+  animation: focuspunto3 1.5s ease-in-out;
+  text-align: left;
+  animation-fill-mode: forwards;
+
+}
+
+#punto3-container.inactive{
+  height: 50vh;
+  width: 90vw;
+  position: absolute;
+  display: block;
+  z-index: 9;
+  animation: n3unfocus 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+  margin: 20px;
+  top: 150px;
+  left: 0;
+  opacity: 100%;
+
+}
+
+
+#chiudi3 {
+  opacity: 0%;
+  height: 50px;
+  width: 50px;
+  display: block;
+  border-radius: 5px;
+  position: relative;
+  float: right;
+  z-index: 1000;
+  pointer-events: all;
+  margin-left: 10px;
+}
+
+#chiudi3.attivo {
+  animation: fadein 1s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+}
+
+#chiudi3.inactive {
+  opacity: 0%;
+}
+
+
+#punto3.attivo{
+  animation: focuspunto3- 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+  pointer-events: stroke;
+   
+ }
+
+ #punto3.inactive{
+  animation: unfocus22 1.5s ease-in-out;
+  height: 50vh;
+  width: 90vw;
+  position: absolute;
+  display: block;
+  z-index: 9;
+  animation-fill-mode: forwards;
+  opacity: 100%;
+  overflow: hidden;
+   
+ }
+ #descrizionepunto3{
+  opacity: 0%;
+
+}
+
+#descrizionepunto3.attivo{
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 1.2s;
+}
+
+
+
+@keyframes focuspunto4 {
+
+  0%{
+    pointer-events: stroke; 
+   }
+   100%{
+    background-color: #CAE9FF;
+    height: 40vh;
+    width: 90vw;
+    top: 250px;
+    position: absolute;
+    display: block;
+    z-index: 10;
+    pointer-events: stroke;
+    overflow: scroll;
+   }
+  }
+@keyframes focuspunto4- {
+
+  0%{
+    pointer-events: stroke; 
+   }
+   100%{
+    height: 40vh;
+    width: 90vw;
+    position: absolute;
+    display: block;
+    z-index: 10;
+    pointer-events: stroke;
+    text-align: left;
+    overflow: scroll;
+   }
+
+  }
+
+
+  @keyframes n4unfocus {
+    0%{
+      pointer-events: none;
+      background-color: #CAE9FF;
+      text-align: left;
+    }
+    100%{
+      height: 100px;
+      width: calc(150px + 5vw);
+      display: block;
+      position: absolute;
+      border: none;
+      pointer-events: all;
+      top:450px;
+      text-align: right;
+      z-index: 9;
+    }
+  }
+  
+
+
+
+
+
+
+#punto4-container{
+  opacity: 0;
+  height: 100px;
+  top: 450px;
+  width: calc(140px + 5vw);
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  border: none;
+  margin: 20px;
+  animation: fadeIn 2s linear;
+  animation-delay: 1.7s;
+  animation-fill-mode: forwards;
+  right: 0;
+  text-align: right;
+  z-index: 9;
+}
+
+#punto4{
+  animation: glow linear 1.5s infinite;
+  animation-delay: 1.7s;
+  height: inherit;
+}
+
+#punto4-container.attivo{
+  opacity: 100%;
+  animation: focuspunto4 1.5s ease-in-out;
+  text-align: left;
+  animation-fill-mode: forwards;
+
+}
+
+#punto4-container.inactive{
+  height: 40vh;
+  width: 90vw;
+  position: absolute;
+  display: block;
+  z-index: 10;
+  animation: n4unfocus 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+  margin: 20px;
+  top: 250px;
+  opacity: 100%;
+
+}
+
+
+#chiudi4 {
+  opacity: 0%;
+  height: 50px;
+  width: 50px;
+  display: block;
+  border-radius: 5px;
+  position: relative;
+  float: right;
+  z-index: 1000;
+  pointer-events: all;
+  margin-left: 10px;
+}
+
+#chiudi4.attivo {
+  animation: fadein 1s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+}
+
+#chiudi4.inactive {
+  opacity: 0%;
+}
+
+
+#punto4.attivo{
+  animation: focuspunto4- 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+  pointer-events: stroke;
+   
+ }
+
+ #punto4.inactive{
+  animation: unfocus22 1.5s ease-in-out;
+  height: 40vh;
+  width: 90vw;
+  position: absolute;
+  display: block;
+  z-index: 10;
+  animation-fill-mode: forwards;
+  opacity: 100%;
+   
+ }
+ #descrizionepunto4{
+  opacity: 0%;
+
+}
+
+#descrizionepunto4.attivo{
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 1.2s;
+}
+
+
+@keyframes displayfadeout{
+  0%{
+    opacity: 100%;
+  }
+  100%{
+    opacity: 0%;
+    display: none;
+  }
+
+}
+
+
+#scrollappear.hidden{
+  animation: displayfadeout 1s linear forwards 
+ 
+ }
+ 
+ #scrollappear{
+   display: block;
+   animation: fadeIn 2s linear forwards;
+ 
+  }
+ 
+ /*punto5*/
+ 
+  @keyframes focuspunto5 {
+
+    0%{
+      pointer-events: stroke; 
+     }
+     100%{
+      background-color: #CAE9FF;
+      height: 40vh;
+      width: 90vw;
+      top: 250px;
+      position: absolute;
+      display: block;
+      z-index: 10;
+      pointer-events: stroke;
+     }
+    }
+  @keyframes focuspunto5- {
+  
+    0%{
+      pointer-events: stroke; 
+     }
+     100%{
+      height: 40vh;
+      width: 90vw;
+      position: absolute;
+      display: block;
+      z-index: 10;
+      pointer-events: stroke;
+      text-align: left;
+     }
+  
+    }
+  
+  
+    @keyframes n5unfocus {
+      0%{
+        pointer-events: none;
+        background-color: #CAE9FF;
+      }
+      100%{
+        height: 100px;
+        width: calc(150px + 5vw);
+        display: block;
+        position: absolute;
+        border: none;
+        pointer-events: all;
+        top:200px;
+
+      }
+    }
+    
+  
+  
+  
+  
+  
+  
+  #punto5-container{
+    opacity: 0;
+    height: 100px;
+    top: 200px;
+    width: calc(140px + 5vw);
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    border: none;
+    margin: 20px;
+    animation: fadeIn 2s linear;
+    animation-delay: 0,2s;
+    animation-fill-mode: forwards;
+    left: 0;
+    text-align: left;
+  }
+  
+  #punto5{
+    animation: glow linear 1.5s infinite;
+    animation-delay: 0.5s;
+    height: inherit;
+  }
+  
+  #punto5-container.attivo{
+    opacity: 100%;
+    animation: focuspunto5 1.5s ease-in-out;
+    text-align: left;
+    animation-fill-mode: forwards;
+  
+  }
+  
+  #punto5-container.inactive{
+    height: 40vh;
+    width: 90vw;
+    position: absolute;
+    display: block;
+    z-index: 10;
+    animation: n5unfocus 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+    margin: 20px;
+    top: 250px;
+    opacity: 100%;
+  
+  }
+  
+  
+  #chiudi5 {
+    opacity: 0%;
+    height: 50px;
+    width: 50px;
+    display: block;
+    border-radius: 5px;
+    position: relative;
+    float: right;
+    z-index: 1000;
+    pointer-events: all;
+    margin-left: 10px;
+  }
+  
+  #chiudi5.attivo {
+    animation: fadein 1s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+  }
+  
+  #chiudi5.inactive {
+    opacity: 0%;
+  }
+  
+  
+  #punto5.attivo{
+    animation: focuspunto5- 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+    pointer-events: stroke;
+     
+   }
+  
+   #punto5.inactive{
+    animation: unfocus22 1.5s ease-in-out;
+    height: 40vh;
+    width: 90vw;
+    position: absolute;
+    display: block;
+    z-index: 10;
+    animation-fill-mode: forwards;
+    opacity: 100%;
+     
+   }
+   #descrizionepunto5{
+    opacity: 0%;
+    pointer-events: none;
+  
+  }
+  
+  #descrizionepunto5.attivo{
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 1.2s;
+  }
+
+
+
+
+
+
+  #punto6-container{
+    opacity: 0;
+    height: 100px;
+    width: calc(140px + 5vw);
+    top:250px;
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    border: none;
+    margin: 20px;
+    right: 0;
+    animation: fadeIn 2s linear;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+    text-align: right;
+  }
+  
+  
+  @keyframes focuspunto6 {
+  
+    0%{
+      pointer-events: none; 
+     }
+     100%{
+      background-color: #CAE9FF;
+      height: 40vh;
+      width: 90vw;
+      top: 200px;
+      position: absolute;
+      display: block;
+      z-index: 10;
+      pointer-events: none;
+      overflow: scroll;
+     }
+  
+  
+  }
+  
+  @keyframes focuspunto6- {
+  
+    0%{
+      pointer-events: none; 
+     }
+     100%{
+      height: 40vh;
+      width: 90vw;
+      position: absolute;
+      display: block;
+      z-index: 10;
+      pointer-events: stroke;
+      overflow: scroll;
+     }
+  
+  
+  }
+  
+  
+  @keyframes n6unfocus {
+    0%{
+      pointer-events: none;
+      background-color: #CAE9FF;
+      text-align: left;
+    }
+    100%{
+      height: 100px;
+      width: calc(150px + 5vw);
+      display: block;
+      position: absolute;
+      border: none;
+      pointer-events: all;
+      top:250px;
+      text-align: right;
+    }
+  }
+  
+  @keyframes unfocus22 {
+    0%{
+      pointer-events: none;
+      background-color: #0770bb00;
+    }
+    100%{
+      height: 100px;
+      width: calc(150px + 5vw);
+      opacity: 100%;
+      display: block;
+      position: absolute;
+      pointer-events: all;
+    }
+  }
+  
+  
+  
+  #punto6-container.attivo{
+    opacity: 100%;
+    animation: focuspunto6 1.5s ease-in-out;
+    text-align: left;
+    animation-fill-mode: forwards;
+  
+  }
+  
+  #punto6-container.inactive{
+    height: 40vh;
+    width: 90vw;
+    position: absolute;
+    display: block;
+    z-index: 9;
+    animation: n6unfocus 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+    margin: 20px;
+    top:200px;
+    opacity: 100%;
+  
+  }
+  
+  
+  #chiudi6 {
+    opacity: 0%;
+    height: 50px;
+    width: 50px;
+    display: block;
+    border-radius: 5px;
+    position: relative;
+    float: right;
+    z-index: 1000;
+    pointer-events: all;
+    margin-left: 10px;
+  }
+  
+  #chiudi6.attivo {
+    animation: fadein 1s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+  }
+  
+  #chiudi6.inactive {
+    opacity: 0%;
+  }
+  
+  #punto6{
+    animation: glow linear 1.5s infinite;
+    animation-delay: 0.8s;
+    height: inherit;
+  }
+  
+  #punto6.attivo{
+    animation: focuspunto6- 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+    pointer-events: stroke;
+     
+   }
+  
+   #punto6.inactive{
+    height: 40vh;
+    width: 90vw;
+    position: absolute;
+    display: block;
+    z-index: 9;
+    animation: unfocus22 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 100%;
+    overflow: hidden;
+     
+   }
+   #descrizionepunto6{
+    opacity: 0%;
+  
+  }
+  
+  #descrizionepunto6.attivo{
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 1.2s;
+  }
+
+
+
+
+
+
+  @keyframes focuspunto7 {
+
+    0%{
+      pointer-events: stroke; 
+     }
+     100%{
+      background-color: #CAE9FF;
+      height: 50vh;
+      width: 90vw;
+      top: 150px;
+      left:0;
+      position: absolute;
+      display: block;
+      z-index: 10;
+      pointer-events: stroke;
+     }
+  
+  
+  }
+  
+  @keyframes focuspunto7- {
+  
+    0%{
+      pointer-events: stroke; 
+     }
+     100%{
+      height: 50vh;
+      width: 90vw;
+      position: absolute;
+      display: block;
+      z-index: 10;
+      pointer-events: stroke;
+      overflow: scroll;
+     }
+  
+    }
+  
+  
+    @keyframes n7unfocus {
+      0%{
+        pointer-events: none;
+        background-color: #CAE9FF;
+        text-align: left;
+      }
+      100%{
+        height: 100px;
+        width: calc(150px + 5vw);
+        display: block;
+        position: absolute;
+        border: none;
+        pointer-events: all;
+        top:350px;
+      }
+    }
+  
+  
+  
+  
+  
+   #punto7-container{
+    opacity: 0;
+    height: 100px;
+    top: 350px;
+    width: calc(140px + 5vw);
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    border: none;
+    margin: 20px;
+    left: 0px;
+    animation: fadeIn 2s linear;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
+    float: left;
+  }
+  
+  #punto7{
+    animation: glow linear 1.5s infinite;
+    animation-delay: 1.2s;
+    height: inherit;
+  }
+  
+  #punto7.attivo{
+    animation: focuspunto7- 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+    pointer-events: stroke;
+     
+   }
+  
+  
+  
+  #punto7-container.attivo{
+    opacity: 100%;
+    animation: focuspunto3 1.5s ease-in-out;
+    text-align: left;
+    animation-fill-mode: forwards;
+  
+  }
+  
+  #punto7-container.inactive{
+    height: 50vh;
+    width: 90vw;
+    position: absolute;
+    display: block;
+    z-index: 9;
+    animation: n7unfocus 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+    margin: 20px;
+    top: 150px;
+    left: 0;
+    opacity: 100%;
+  
+  }
+  
+  
+  #chiudi7 {
+    opacity: 0%;
+    height: 50px;
+    width: 50px;
+    display: block;
+    border-radius: 5px;
+    position: relative;
+    float: right;
+    z-index: 1000;
+    pointer-events: all;
+    margin-left: 10px;
+  }
+  
+  #chiudi7.attivo {
+    animation: fadein 1s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+  }
+  
+  #chiudi7.inactive {
+    opacity: 0%;
+  }
+  
+  
+  #punto7.close{
+    animation: focuspunto3- 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+    pointer-events: stroke;
+     
+   }
+  
+   #punto7.inactive{
+    animation: unfocus22 1.5s ease-in-out;
+    height: 50vh;
+    width: 90vw;
+    position: absolute;
+    display: block;
+    z-index: 9;
+    animation-fill-mode: forwards;
+    opacity: 100%;
+    overflow: hidden;
+     
+   }
+   #descrizionepunto7{
+    opacity: 0%;
+  
+  }
+  
+  #descrizionepunto7.attivo{
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 1.2s;
+  }
+
+  
+  @keyframes focuspunto8 {
+
+    0%{
+      pointer-events: stroke; 
+     }
+     100%{
+      background-color: #CAE9FF;
+      height: 50vh;
+      width: 90vw;
+      top: 250px;
+      position: absolute;
+      display: block;
+      z-index: 10;
+      pointer-events: stroke;
+     }
+    }
+  @keyframes focuspunto8- {
+  
+    0%{
+      pointer-events: stroke; 
+     }
+     100%{
+      height: 50vh;
+      width: 90vw;
+      position: absolute;
+      display: block;
+      z-index: 10;
+      pointer-events: stroke;
+      text-align: left;
+     }
+  
+    }
+  
+  
+    @keyframes n8unfocus {
+      0%{
+        pointer-events: none;
+        background-color: #CAE9FF;
+        text-align: left;
+      }
+      100%{
+        height: 100px;
+        width: calc(150px + 5vw);
+        display: block;
+        position: absolute;
+        border: none;
+        pointer-events: all;
+        top:450px;
+        text-align: center;
+      }
+    }
+    
+  
+  
+  
+  
+  
+  
+  #punto8-container{
+    opacity: 0;
+    height: 100px;
+    top: 450px;
+    width: calc(140px + 5vw);
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    border: none;
+    margin: 20px;
+    animation: fadeIn 2s linear;
+    animation-delay: 1.7s;
+    animation-fill-mode: forwards;
+    right: 0px;
+    text-align: center;
+  }
+  
+  #punto8{
+    animation: glow linear 1.5s infinite;
+    animation-delay: 1.7s;
+    height: inherit;
+  }
+  
+  #punto8-container.attivo{
+    opacity: 100%;
+    animation: focuspunto8 1.5s ease-in-out;
+    text-align: left;
+    animation-fill-mode: forwards;
+  
+  }
+  
+  #punto8-container.inactive{
+    height: 50vh;
+    width: 90vw;
+    position: absolute;
+    display: block;
+    z-index: 10;
+    animation: n8unfocus 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+    margin: 20px;
+    top: 250px;
+    opacity: 100%;
+  
+  }
+  
+  
+  #chiudi8 {
+    opacity: 0%;
+    height: 50px;
+    width: 50px;
+    display: block;
+    border-radius: 5px;
+    position: relative;
+    float: right;
+    z-index: 1000;
+    pointer-events: all;
+    margin-left: 10px;
+  }
+  
+  #chiudi8.attivo {
+    animation: fadein 1s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+  }
+  
+  #chiudi8.inactive {
+    opacity: 0%;
+  }
+  
+  
+  #punto8.attivo{
+    animation: focuspunto8- 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+    pointer-events: stroke;
+     
+   }
+  
+   #punto8.inactive{
+    animation: unfocus22 1.5s ease-in-out;
+    height: 50vh;
+    width: 90vw;
+    position: absolute;
+    display: block;
+    z-index: 10;
+    animation-fill-mode: forwards;
+    opacity: 100%;
+     
+   }
+   #descrizionepunto8{
+    opacity: 0%;
+  
+  }
+  
+  #descrizionepunto8.attivo{
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 1.2s;
+  }
+
+  #descrizionepunto8.inactive{
+    pointer-events: none;
+  }
+  
+
+  
+  @keyframes focuspunto9 {
+
+    0%{
+      pointer-events: stroke; 
+     }
+     100%{
+      background-color: #CAE9FF;
+      height: 50vh;
+      width: 90vw;
+      top: 250px;
+      left:0;
+      position: absolute;
+      display: block;
+      z-index: 10;
+      pointer-events: stroke;
+     }
+  
+  
+  }
+  
+  @keyframes focuspunto9- {
+  
+    0%{
+      pointer-events: stroke; 
+     }
+     100%{
+      height: 50vh;
+      width: 90vw;
+      position: absolute;
+      display: block;
+      z-index: 10;
+      pointer-events: stroke;
+      overflow: scroll;
+     }
+  
+    }
+  
+  
+    @keyframes n9unfocus {
+      0%{
+        pointer-events: none;
+        background-color: #CAE9FF;
+        text-align: left;
+      }
+      100%{
+        height: 100px;
+        width: calc(150px + 5vw);
+        display: block;
+        position: absolute;
+        border: none;
+        pointer-events: all;
+        top:550px;
+      }
+    }
+  
+  
+  
+  
+  
+   #punto9-container{
+    opacity: 0;
+    height: 100px;
+    top: 550px;
+    width: calc(140px + 5vw);
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    border: none;
+    margin: 20px;
+    left: 0px;
+    animation: fadeIn 2s linear;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    float: left;
+  }
+  
+  #punto9{
+    animation: glow linear 1.5s infinite;
+    animation-delay: 2s;
+    height: inherit;
+  }
+  
+  #punto9.attivo{
+    animation: focuspunto9- 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+    pointer-events: stroke;
+     
+   }
+  
+  
+  
+  #punto9-container.attivo{
+    opacity: 100%;
+    animation: focuspunto9 1.5s ease-in-out;
+    text-align: left;
+    animation-fill-mode: forwards;
+  
+  }
+  
+  #punto9-container.inactive{
+    height: 50vh;
+    width: 90vw;
+    position: absolute;
+    display: block;
+    z-index: 9;
+    animation: n9unfocus 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+    margin: 20px;
+    top: 250px;
+    left: 0;
+    opacity: 100%;
+  
+  }
+  
+  
+  #chiudi9 {
+    opacity: 0%;
+    height: 50px;
+    width: 50px;
+    display: block;
+    border-radius: 5px;
+    position: relative;
+    float: right;
+    z-index: 1000;
+    pointer-events: all;
+    margin-left: 10px;
+  }
+  
+  #chiudi9.attivo {
+    animation: fadein 1s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+  }
+  
+  #chiudi9.inactive {
+    opacity: 0%;
+  }
+  
+  
+  #punto9.close{
+    animation: focuspunto9- 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+    pointer-events: stroke;
+     
+   }
+  
+   #punto9.inactive{
+    animation: unfocus22 1.5s ease-in-out;
+    height: 50vh;
+    width: 90vw;
+    position: absolute;
+    display: block;
+    z-index: 9;
+    animation-fill-mode: forwards;
+    opacity: 100%;
+    overflow: hidden;
+     
+   }
+   #descrizionepunto9{
+    opacity: 0%;
+  
+  }
+  
+  #descrizionepunto9.attivo{
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 1.2s;
+  }
+
+
+  #scrollappear1.hidden{
+    animation: displayfadeout 1s linear forwards 
+   
+   }
+   
+   #scrollappear1{
+     display: block;
+     animation: fadeIn 2s linear forwards;
+   
+    }
+
+
+
+
+
+
+
+
+
+    @keyframes focuspunto10 {
+
+      0%{
+        pointer-events: stroke; 
+       }
+       100%{
+        background-color: #CAE9FF;
+        height: 50vh;
+        width: 90vw;
+        top: 250px;
+        position: absolute;
+        display: block;
+        z-index: 10;
+        pointer-events: stroke;
+       }
+      }
+    @keyframes focuspunto10- {
+    
+      0%{
+        pointer-events: stroke; 
+       }
+       100%{
+        height: 50vh;
+        width: 90vw;
+        position: absolute;
+        display: block;
+        z-index: 10;
+        pointer-events: stroke;
+        text-align: left;
+       }
+    
+      }
+    
+    
+      @keyframes n10unfocus {
+        0%{
+          pointer-events: none;
+          background-color: #CAE9FF;
+        }
+        100%{
+          height: 100px;
+          width: calc(150px + 5vw);
+          display: block;
+          position: absolute;
+          border: none;
+          pointer-events: all;
+          top:200px;
+  
+        }
+      }
+      
+    
+    
+    
+    
+    
+    
+    #punto10-container{
+      opacity: 0;
+      height: 100px;
+      top: 200px;
+      width: calc(140px + 5vw);
+      border-radius: 5px;
+      display: block;
+      position: absolute;
+      border: none;
+      margin: 20px;
+      animation: fadeIn 2s linear;
+      animation-delay: 0,2s;
+      animation-fill-mode: forwards;
+      left: 0;
+      text-align: left;
+    }
+    
+    #punto10{
+      animation: glow linear 1.5s infinite;
+      animation-delay: 0.5s;
+      height: inherit;
+    }
+    
+    #punto10-container.attivo{
+      opacity: 100%;
+      animation: focuspunto10 1.5s ease-in-out;
+      text-align: left;
+      animation-fill-mode: forwards;
+    
+    }
+    
+    #punto10-container.inactive{
+      height: 50vh;
+      width: 90vw;
+      position: absolute;
+      display: block;
+      z-index: 10;
+      animation: n10unfocus 1.5s ease-in-out;
+      animation-fill-mode: forwards;
+      margin: 20px;
+      top: 250px;
+      opacity: 100%;
+    
+    }
+    
+    
+    #chiudi10 {
+      opacity: 0%;
+      height: 50px;
+      width: 50px;
+      display: block;
+      border-radius: 5px;
+      position: relative;
+      float: right;
+      z-index: 1000;
+      pointer-events: all;
+      margin-left: 10px;
+    }
+    
+    #chiudi10.attivo {
+      animation: fadein 1s linear;
+      animation-fill-mode: forwards;
+      animation-delay: 1.5s;
+    }
+    
+    #chiudi10.inactive {
+      opacity: 0%;
+    }
+    
+    
+    #punto10.attivo{
+      animation: focuspunto10- 1.5s ease-in-out;
+      animation-fill-mode: forwards;
+      pointer-events: stroke;
+       
+     }
+    
+     #punto10.inactive{
+      animation: unfocus22 1.5s ease-in-out;
+      height: 50vh;
+      width: 90vw;
+      position: absolute;
+      display: block;
+      z-index: 10;
+      animation-fill-mode: forwards;
+      opacity: 100%;
+       
+     }
+     #descrizionepunto10{
+      opacity: 0%;
+      pointer-events: none;
+    
+    }
+    
+    #descrizionepunto10.attivo{
+      animation: fadeIn 1s linear forwards;
+      animation-delay: 1.2s;
+    }
+  
+  
+  
+    #punto11-container{
+      opacity: 0;
+      height: 100px;
+      width: calc(140px + 5vw);
+      top:250px;
+      border-radius: 5px;
+      display: block;
+      position: absolute;
+      border: none;
+      margin: 20px;
+      right: 0;
+      animation: fadeIn 2s linear;
+      animation-delay: 0.8s;
+      animation-fill-mode: forwards;
+      text-align: right;
+    }
+    
+    
+    @keyframes focuspunto11 {
+    
+      0%{
+        pointer-events: none; 
+       }
+       100%{
+        background-color: #CAE9FF;
+        height: 40vh;
+        width: 90vw;
+        top: 100px;
+        position: absolute;
+        display: block;
+        z-index: 10;
+        pointer-events: none;
+        overflow: scroll;
+       }
+    
+    
+    }
+    
+    @keyframes focuspunto11- {
+    
+      0%{
+        pointer-events: none; 
+       }
+       100%{
+        height: 40vh;
+        width: 90vw;
+        position: absolute;
+        display: block;
+        z-index: 10;
+        pointer-events: stroke;
+        overflow: scroll;
+       }
+    
+    
+    }
+    
+    
+    @keyframes n11unfocus {
+      0%{
+        pointer-events: none;
+        background-color: #CAE9FF;
+        text-align: left;
+      }
+      100%{
+        height: 100px;
+        width: calc(150px + 5vw);
+        display: block;
+        position: absolute;
+        border: none;
+        pointer-events: all;
+        top:250px;
+        text-align: right;
+      }
+    }
+    
+    @keyframes unfocus22 {
+      0%{
+        pointer-events: none;
+        background-color: #0770bb00;
+      }
+      100%{
+        height: 100px;
+        width: calc(150px + 5vw);
+        opacity: 100%;
+        display: block;
+        position: absolute;
+        pointer-events: all;
+      }
+    }
+    
+    
+    
+    #punto11-container.attivo{
+      opacity: 100%;
+      animation: focuspunto11 1.5s ease-in-out;
+      text-align: left;
+      animation-fill-mode: forwards;
+    
+    }
+    
+    #punto11-container.inactive{
+      height: 40vh;
+      width: 90vw;
+      position: absolute;
+      display: block;
+      z-index: 9;
+      animation: n11unfocus 1.5s ease-in-out;
+      animation-fill-mode: forwards;
+      margin: 20px;
+      top:100px;
+      opacity: 100%;
+    
+    }
+    
+    
+    #chiudi11 {
+      opacity: 0%;
+      height: 50px;
+      width: 50px;
+      display: block;
+      border-radius: 5px;
+      position: relative;
+      float: right;
+      z-index: 1000;
+      pointer-events: none;
+      margin-left: 10px;
+    }
+    
+    #chiudi11.attivo {
+      animation: fadein 1s linear;
+      animation-fill-mode: forwards;
+      animation-delay: 1.5s;
+      pointer-events: all;
+    }
+    
+    #chiudi11.inactive {
+      opacity: 0%;
+      pointer-events: none;
+    }
+    
+    #punto11{
+      animation: glow linear 1.5s infinite;
+      animation-delay: 0.8s;
+      height: inherit;
+    }
+    
+    #punto11.attivo{
+      animation: focuspunto11- 1.5s ease-in-out;
+      animation-fill-mode: forwards;
+      pointer-events: stroke;
+       
+     }
+    
+     #punto11.inactive{
+      height: 40vh;
+      width: 90vw;
+      position: absolute;
+      display: block;
+      z-index: 9;
+      animation: unfocus22 1.5s ease-in-out;
+      animation-fill-mode: forwards;
+      opacity: 100%;
+      overflow: hidden;
+       
+     }
+     #descrizionepunto11{
+      opacity: 0%;
+    
+    }
+    
+    #descrizionepunto11.attivo{
+      animation: fadeIn 1s linear forwards;
+      animation-delay: 1.2s;
+    }
+  
+  
+    @keyframes focuspunto12 {
+
+      0%{
+        pointer-events: stroke; 
+       }
+       100%{
+        background-color: #CAE9FF;
+        height: 50vh;
+        width: 90vw;
+        top: 150px;
+        left:0;
+        position: absolute;
+        display: block;
+        z-index: 10;
+        pointer-events: stroke;
+       }
+    
+    
+    }
+    
+    @keyframes focuspunto12- {
+    
+      0%{
+        pointer-events: stroke; 
+       }
+       100%{
+        height: 50vh;
+        width: 90vw;
+        position: absolute;
+        display: block;
+        z-index: 10;
+        pointer-events: stroke;
+        overflow: scroll;
+       }
+    
+      }
+    
+    
+      @keyframes n12unfocus {
+        0%{
+          pointer-events: none;
+          background-color: #CAE9FF;
+          text-align: left;
+        }
+        100%{
+          height: 100px;
+          width: calc(150px + 5vw);
+          display: block;
+          position: absolute;
+          border: none;
+          pointer-events: all;
+          top:350px;
+        }
+      }
+    
+    
+    
+    
+    
+     #punto12-container{
+      opacity: 0;
+      height: 100px;
+      top: 350px;
+      width: calc(140px + 5vw);
+      border-radius: 5px;
+      display: block;
+      position: absolute;
+      border: none;
+      margin: 20px;
+      left: 0px;
+      animation: fadeIn 2s linear;
+      animation-delay: 1.2s;
+      animation-fill-mode: forwards;
+      float: left;
+    }
+    
+    #punto12{
+      animation: glow linear 1.5s infinite;
+      animation-delay: 1.2s;
+      height: inherit;
+    }
+    
+    #punto12.attivo{
+      animation: focuspunto12- 1.5s ease-in-out;
+      animation-fill-mode: forwards;
+      pointer-events: stroke;
+       
+     }
+    
+    
+    
+    #punto12-container.attivo{
+      opacity: 100%;
+      animation: focuspunto3 1.5s ease-in-out;
+      text-align: left;
+      animation-fill-mode: forwards;
+    
+    }
+    
+    #punto12-container.inactive{
+      height: 50vh;
+      width: 90vw;
+      position: absolute;
+      display: block;
+      z-index: 9;
+      animation: n12unfocus 1.5s ease-in-out;
+      animation-fill-mode: forwards;
+      margin: 20px;
+      top: 150px;
+      left: 0;
+      opacity: 100%;
+    
+    }
+    
+    
+    #chiudi12 {
+      opacity: 0%;
+      height: 50px;
+      width: 50px;
+      display: block;
+      border-radius: 5px;
+      position: relative;
+      float: right;
+      z-index: 1000;
+      pointer-events: none;
+      margin-left: 10px;
+    }
+    
+    #chiudi12.attivo {
+      animation: fadein 1s linear;
+      animation-fill-mode: forwards;
+      animation-delay: 1.5s;
+      pointer-events: all;
+    }
+    
+    #chiudi12.inactive {
+      opacity: 0%;
+      pointer-events: none;
+    }
+    
+    
+    #punto12.close{
+      animation: focuspunto3- 1.5s ease-in-out;
+      animation-fill-mode: forwards;
+      pointer-events: stroke;
+       
+     }
+    
+     #punto12.inactive{
+      animation: unfocus22 1.5s ease-in-out;
+      height: 50vh;
+      width: 90vw;
+      position: absolute;
+      display: block;
+      z-index: 9;
+      animation-fill-mode: forwards;
+      opacity: 100%;
+      overflow: hidden;
+       
+     }
+     #descrizionepunto12{
+      opacity: 0%;
+    
+    }
+    
+    #descrizionepunto12.attivo{
+      animation: fadeIn 1s linear forwards;
+      animation-delay: 1.2s;
+    }
+
+    @keyframes focuspunto13 {
+
+      0%{
+        pointer-events: stroke; 
+       }
+       100%{
+        background-color: #CAE9FF;
+        height: 50vh;
+        width: 90vw;
+        top: 250px;
+        position: absolute;
+        display: block;
+        z-index: 10;
+        pointer-events: stroke;
+       }
+      }
+    @keyframes focuspunto13- {
+    
+      0%{
+        pointer-events: stroke; 
+       }
+       100%{
+        height: 50vh;
+        width: 90vw;
+        position: absolute;
+        display: block;
+        z-index: 10;
+        pointer-events: stroke;
+        text-align: left;
+       }
+    
+      }
+    
+    
+      @keyframes n13unfocus {
+        0%{
+          pointer-events: none;
+          background-color: #CAE9FF;
+          text-align: left;
+        }
+        100%{
+          height: 100px;
+          width: calc(150px + 5vw);
+          display: block;
+          position: absolute;
+          border: none;
+          pointer-events: all;
+          top:450px;
+          text-align: center;
+        }
+      }
+      
+    
+    
+    
+    
+    
+    
+    #punto13-container{
+      opacity: 0;
+      height: 100px;
+      top: 450px;
+      width: calc(140px + 5vw);
+      border-radius: 5px;
+      display: block;
+      position: absolute;
+      border: none;
+      margin: 20px;
+      animation: fadeIn 2s linear;
+      animation-delay: 1.7s;
+      animation-fill-mode: forwards;
+      right: 0px;
+      text-align: center;
+    }
+    
+    #punto13{
+      animation: glow linear 1.5s infinite;
+      animation-delay: 1.7s;
+      height: inherit;
+    }
+    
+    #punto13-container.attivo{
+      opacity: 100%;
+      animation: focuspunto13 1.5s ease-in-out;
+      text-align: left;
+      animation-fill-mode: forwards;
+    
+    }
+    
+    #punto13-container.inactive{
+      height: 50vh;
+      width: 90vw;
+      position: absolute;
+      display: block;
+      z-index: 10;
+      animation: n13unfocus 1.5s ease-in-out;
+      animation-fill-mode: forwards;
+      margin: 20px;
+      top: 250px;
+      opacity: 100%;
+    
+    }
+    
+    
+    #chiudi13 {
+      opacity: 0%;
+      height: 50px;
+      width: 50px;
+      display: block;
+      border-radius: 5px;
+      position: relative;
+      float: right;
+      z-index: 1000;
+      pointer-events: none;
+      margin-left: 10px;
+    }
+    
+    #chiudi13.attivo {
+      animation: fadein 1s linear;
+      animation-fill-mode: forwards;
+      animation-delay: 1.5s;
+      pointer-events: all;
+    }
+    
+    #chiudi13.inactive {
+      opacity: 0%;
+      pointer-events: none;
+    }
+    
+    
+    #punto13.attivo{
+      animation: focuspunto13- 1.5s ease-in-out;
+      animation-fill-mode: forwards;
+      pointer-events: stroke;
+       
+     }
+    
+     #punto13.inactive{
+      animation: unfocus22 1.5s ease-in-out;
+      height: 50vh;
+      width: 90vw;
+      position: absolute;
+      display: block;
+      z-index: 10;
+      animation-fill-mode: forwards;
+      opacity: 100%;
+       
+     }
+     #descrizionepunto13{
+      opacity: 0%;
+    
+    }
+    
+    #descrizionepunto13.attivo{
+      animation: fadeIn 1s linear forwards;
+      animation-delay: 1.2s;
+    }
+  
+    #descrizionepunto13.inactive{
+      pointer-events: none;
+    }
+    
+
+    @keyframes focuspunto14 {
+
+      0%{
+        pointer-events: stroke; 
+       }
+       100%{
+        background-color: #CAE9FF;
+        height: 50vh;
+        width: 90vw;
+        top: 200px;
+        position: absolute;
+        display: block;
+        z-index: 10;
+        pointer-events: stroke;
+       }
+      }
+    @keyframes focuspunto14- {
+    
+      0%{
+        pointer-events: stroke; 
+       }
+       100%{
+        height: 50vh;
+        width: 90vw;
+        position: absolute;
+        display: block;
+        z-index: 10;
+        pointer-events: stroke;
+        text-align: left;
+       }
+    
+      }
+    
+    
+      @keyframes n14unfocus {
+        0%{
+          pointer-events: none;
+          background-color: #CAE9FF;
+          text-align: left;
+        }
+        100%{
+          height: 100px;
+          width: calc(150px + 5vw);
+          display: block;
+          position: absolute;
+          border: none;
+          pointer-events: all;
+          top:620px;
+          text-align: center;
+        }
+      }
+      
+    
+    
+    
+    
+    
+    
+    #punto14-container{
+      opacity: 0;
+      height: 100px;
+      top: 620px;
+      width: calc(140px + 5vw);
+      border-radius: 5px;
+      display: block;
+      position: absolute;
+      border: none;
+      margin: 20px;
+      animation: fadeIn 2s linear;
+      animation-delay: 2.3s;
+      animation-fill-mode: forwards;
+      right: 0px;
+      text-align: center;
+    }
+    
+    #punto14{
+      animation: glow linear 1.5s infinite;
+      animation-delay: 1.7s;
+      height: inherit;
+    }
+    
+    #punto14-container.attivo{
+      opacity: 100%;
+      animation: focuspunto14 1.5s ease-in-out;
+      text-align: left;
+      animation-fill-mode: forwards;
+    
+    }
+    
+    #punto14-container.inactive{
+      height: 50vh;
+      width: 90vw;
+      position: absolute;
+      display: block;
+      z-index: 10;
+      animation: n14unfocus 1.5s ease-in-out;
+      animation-fill-mode: forwards;
+      margin: 20px;
+      top: 200px;
+      opacity: 100%;
+    
+    }
+    
+    
+    #chiudi14 {
+      opacity: 0%;
+      height: 50px;
+      width: 50px;
+      display: block;
+      border-radius: 5px;
+      position: relative;
+      top:-102%;
+      float: right;
+      z-index: 1000;
+      pointer-events: all;
+    }
+    
+    #chiudi14.attivo {
+      animation: fadein 1s linear;
+      animation-fill-mode: forwards;
+      animation-delay: 1.5s;
+    }
+    
+    #chiudi14.inactive {
+      opacity: 0%;
+    }
+    
+    
+    #punto14.attivo{
+      animation: focuspunto24- 1.5s ease-in-out;
+      animation-fill-mode: forwards;
+      pointer-events: stroke;
+       
+     }
+    
+     #punto14.inactive{
+      animation: unfocus22 1.5s ease-in-out;
+      height: 50vh;
+      width: 90vw;
+      position: absolute;
+      display: block;
+      z-index: 10;
+      animation-fill-mode: forwards;
+      opacity: 100%;
+       
+     }
+     #descrizionepunto14{
+      opacity: 0%;
+    
+    }
+    
+    #descrizionepunto14.attivo{
+      animation: fadeIn 1s linear forwards;
+      animation-delay: 1.2s;
+    }
+  
+    #descrizionepunto14.inactive{
+      pointer-events: none;
+    }
+
+    .footer{
+      background-color:#bedbec94;
+      bottom: 0px;
+      position: absolute;
+      height: 80px;
+      text-align: center;
+      font-size: 14px;
+      width: 100%;
+  
+    }
+
+    .footer p{
+      color:#000000
+    }
